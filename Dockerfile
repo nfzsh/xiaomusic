@@ -1,5 +1,4 @@
 FROM hanxi/xiaomusic:builder AS builder
-ENV DEBIAN_FRONTEND=noninteractive
 RUN pip install -U pdm
 ENV PDM_CHECK_UPDATE=false
 WORKDIR /app
