@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <title>小爱音箱操控面板</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="./jquery-3.7.1.min.js?version=1748562548"></script>
-    <script src="./setting.js?version=1748562548"></script>
-    <link rel="stylesheet" type="text/css" href="./main.css?version=1748562548">
+    <script src="./jquery-3.7.1.min.js?version=1749666240"></script>
+    <script src="./setting.js?version=1749666240"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css?version=1749666240">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z09NC1K7ZW"></script>
@@ -204,8 +204,8 @@ var vConsole = new window.VConsole();
         <label for="pull_ask_sec">获取对话记录间隔(秒):</label>
         <input id="pull_ask_sec" type="number" value="1" />
 
-        <label for="delay_sec">下一首歌延迟播放秒数:</label>
-        <input id="delay_sec" type="number" value="3" />
+        <label for="delay_sec">下一首歌延迟播放秒数(支持负数):</label>
+        <input id="delay_sec" type="number" value="0" />
 
         <label for="stop_tts_msg">停止提示音:</label>
         <input id="stop_tts_msg" type="text" value="收到,再见" />
@@ -259,6 +259,13 @@ var vConsole = new window.VConsole();
           <option value="true">true</option>
           <option value="false" selected>false</option>
         </select>
+
+        <label for="enable_analytics">开启谷歌数据统计(无敏感数据):</label>
+        <select id="enable_analytics">
+          <option value="true" selected>true</option>
+          <option value="false">false</option>
+        </select>
+
 
         <label for="music_list_url"  class="setting-label">歌单地址:
           <button class="option-inline mini-button" id="get_music_list">
